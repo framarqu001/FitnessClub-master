@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="741.0" prefWidth="805.0" spacing="20.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fitnessclubgui.fitnessclub.StudioManagerController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <children>
+      <TabPane prefHeight="522.0" prefWidth="668.0">
+        <tabs>
+          <Tab closable="false" text="Registration">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="434.0" prefWidth="668.0">
+                     <children>
+                        <GridPane fx:id="gridPane" layoutX="1.0" layoutY="1.0" prefHeight="321.0" prefWidth="643.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="135.0" minWidth="0.0" prefWidth="50.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="280.0" minWidth="10.0" prefWidth="106.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="115.0" minWidth="8.0" prefWidth="25.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="335.0" minWidth="10.0" prefWidth="281.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="293.0" minWidth="10.0" prefWidth="111.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints maxHeight="23.0" minHeight="6.0" prefHeight="11.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="43.0" minHeight="10.0" prefHeight="24.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="34.0" minHeight="10.0" prefHeight="33.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="39.0" minHeight="10.0" prefHeight="26.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="38.0" minHeight="10.0" prefHeight="26.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="29.0" minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label prefHeight="27.0" prefWidth="113.0" text="First Name:" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="tf_fName" prefHeight="7.0" prefWidth="278.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                 <padding>
+                                    <Insets bottom="5.0" />
+                                 </padding>
+                              </TextField>
+                              <Label prefHeight="27.0" prefWidth="103.0" text="Last Name:" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="tf_lName" prefHeight="16.0" prefWidth="278.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                                 <padding>
+                                    <Insets bottom="5.0" />
+                                 </padding>
+                              </TextField>
+                              <Label prefHeight="25.0" prefWidth="101.0" text="DOB:" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <DatePicker fx:id="dp_dob" editable="false" prefHeight="6.0" prefWidth="278.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                              <HBox prefHeight="24.0" prefWidth="264.0" spacing="20.0" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                                 <children>
+                                    <RadioButton fx:id="rb_basic" mnemonicParsing="false" selected="true" text="Basic">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="tg_membership" />
+                                       </toggleGroup>
+                                    </RadioButton>
+                                    <RadioButton fx:id="rb_family" mnemonicParsing="false" text="Family" toggleGroup="$tg_membership">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </RadioButton>
+                                    <RadioButton fx:id="rb_premium" mnemonicParsing="false" text="Premium" toggleGroup="$tg_membership">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </RadioButton>
+                                 </children>
+                                 <GridPane.margin>
+                                    <Insets bottom="5.0" top="5.0" />
+                                 </GridPane.margin>
+                              </HBox>
+                              <Label prefHeight="24.0" prefWidth="103.0" text="Membership:" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="bt_register" mnemonicParsing="false" onAction="#register" prefHeight="23.0" prefWidth="100.0" text="Register" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" />
+                                 </padding>
+                              </Button>
+                              <Label prefHeight="23.0" prefWidth="103.0" text="Home Studio:" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                 <padding>
+                                    <Insets bottom="5.0" />
+                                 </padding>
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <ChoiceBox fx:id="cb_homeStudio" prefHeight="0.0" prefWidth="278.0" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                              <Button fx:id="bt_loadMembers" mnemonicParsing="false" onAction="#loadMembers" prefHeight="26.0" prefWidth="108.0" text="Load Members" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="6">
+                                 <center>
+                                    <GridPane BorderPane.alignment="CENTER">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <Button fx:id="bt_remove" mnemonicParsing="false" onAction="#remove" prefHeight="6.0" prefWidth="100.0" text="Remove" GridPane.rowIndex="1" />
+                                          <Button fx:id="bt_check" mnemonicParsing="false" onAction="#check" prefHeight="0.0" prefWidth="100.0" text="Check" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                       </children>
+                                    </GridPane>
+                                 </center>
+                              </BorderPane>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab closable="false" text="Attendance">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="312.0" prefWidth="643.0">
+                     <children>
+                        <VBox layoutX="-1.0" prefHeight="373.0" prefWidth="708.0">
+                           <children>
+                              <TableView fx:id="tv_classes" prefHeight="210.0" prefWidth="612.0">
+                                <columns>
+                                  <TableColumn fx:id="col_instructor" editable="false" prefWidth="123.0" text="Instructor" />
+                                  <TableColumn fx:id="col_class" editable="false" prefWidth="104.0" text="Class" />
+                                    <TableColumn fx:id="col_time" editable="false" prefWidth="111.0" text="Time" />
+                                    <TableColumn fx:id="col_location" editable="false" prefWidth="360.0" text="Location" />
+                                </columns>
+                              </TableView>
+                              <GridPane prefHeight="148.0" prefWidth="643.0">
+                                <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="243.0" minWidth="10.0" prefWidth="23.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="243.0" minWidth="10.0" prefWidth="94.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="181.0" minWidth="10.0" prefWidth="26.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="303.0" minWidth="10.0" prefWidth="198.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="229.0" minWidth="10.0" prefWidth="220.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="13.0" minHeight="5.0" prefHeight="5.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="31.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="31.0" minHeight="6.0" prefHeight="6.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Label prefHeight="17.0" prefWidth="69.0" text="First Name:" GridPane.columnIndex="1">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Last Name:" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="DOB:" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="tf_fNameAttend" maxHeight="-Infinity" prefHeight="28.0" prefWidth="216.0" GridPane.columnIndex="3">
+                                       <font>
+                                          <Font size="10.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="tf_lNameAttend" maxHeight="-Infinity" prefHeight="31.0" prefWidth="216.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font size="10.0" />
+                                       </font>
+                                    </TextField>
+                                    <DatePicker fx:id="dp_dobAttend" editable="false" prefHeight="25.0" prefWidth="233.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                                    <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="3">
+                                       <children>
+                                          <Button fx:id="bt_attend" mnemonicParsing="false" onAction="#attend" prefHeight="25.0" prefWidth="73.0" text="Attend" />
+                                          <Button fx:id="bt_drop" mnemonicParsing="false" onAction="#drop" prefHeight="25.0" prefWidth="74.0" text="Drop">
+                                             <HBox.margin>
+                                                <Insets left="20.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                       </children>
+                                       <padding>
+                                          <Insets left="20.0" />
+                                       </padding>
+                                       <GridPane.margin>
+                                          <Insets />
+                                       </GridPane.margin>
+                                    </HBox>
+                                    <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="4">
+                                       <children>
+                                          <CheckBox fx:id="cb_guest" mnemonicParsing="false" prefHeight="18.0" prefWidth="85.0" text="Guest">
+                                             <HBox.margin>
+                                                <Insets />
+                                             </HBox.margin>
+                                          </CheckBox>
+                                       </children>
+                                       <GridPane.margin>
+                                          <Insets left="22.0" top="5.0" />
+                                       </GridPane.margin>
+                                    </HBox>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab closable="false" text="Members">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="312.0" prefWidth="559.0">
+                     <children>
+                        <TableView fx:id="tv_members" layoutY="-2.0" prefHeight="369.0" prefWidth="765.0">
+                          <columns>
+                            <TableColumn fx:id="col_memProfile" editable="false" prefWidth="113.0" text="Profile" />
+                              <TableColumn fx:id="col_memDob" editable="false" prefWidth="98.0" text="Dob" />
+                              <TableColumn fx:id="col_memStudio" editable="false" prefWidth="99.0" text="Home Studio" />
+                            <TableColumn fx:id="col_memExpiration" editable="false" prefWidth="89.0" text="Expiration" />
+                              <TableColumn fx:id="col_memFee" editable="false" prefWidth="75.0" text="Fee" />
+                              <TableColumn fx:id="col_memType" editable="false" prefWidth="288.5" text="Membership" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab closable="false" text="Schedule">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox layoutX="-1.0" layoutY="1.0" prefHeight="370.0" prefWidth="765.0">
+                           <children>
+                              <GridPane prefHeight="125.0" prefWidth="765.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="302.0" minWidth="10.0" prefWidth="69.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="396.0" minWidth="10.0" prefWidth="143.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="354.0" minWidth="10.0" prefWidth="47.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="379.0" minWidth="10.0" prefWidth="280.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="297.0" minWidth="10.0" prefWidth="75.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="297.0" minWidth="10.0" prefWidth="136.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="297.0" minWidth="10.0" prefWidth="26.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Label prefHeight="25.0" prefWidth="145.0" text="Fitness Class:" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <ChoiceBox fx:id="cb_fitnessClass" prefHeight="25.0" prefWidth="273.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                                    <HBox prefHeight="100.0" prefWidth="200.0" spacing="90.0" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                                       <children>
+                                          <Button fx:id="bt_schMembers" mnemonicParsing="false" onAction="#displayClassMemberList" prefHeight="25.0" prefWidth="98.0" text="Members" />
+                                          <Button fx:id="bt_schGuests" mnemonicParsing="false" onAction="#displayClassGuestList" prefHeight="25.0" prefWidth="89.0" text="Guests" />
+                                       </children>
+                                       <GridPane.margin>
+                                          <Insets />
+                                       </GridPane.margin>
+                                    </HBox>
+                                    <Label text="List By:" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Button fx:id="bt_loadSchedule" mnemonicParsing="false" onAction="#loadSchedule" prefHeight="25.0" prefWidth="137.0" text="Load New Schedule" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                                 </children>
+                              </GridPane>
+                              <TableView fx:id="tv_attendees" prefHeight="245.0" prefWidth="765.0">
+                                <columns>
+                                  <TableColumn fx:id="col_schProfile" editable="false" prefWidth="104.0" text="Profile" />
+                                  <TableColumn fx:id="col_schDOB" editable="false" prefWidth="92.0" text="Dob" />
+                                    <TableColumn fx:id="col_schStudio" editable="false" prefWidth="105.0" text="Home Studio" />
+                                    <TableColumn fx:id="col_schExpiration" editable="false" prefWidth="121.0" text="Expiration" />
+                                    <TableColumn fx:id="col_schFee" prefWidth="73.0" text="Fee" />
+                                    <TableColumn fx:id="col_schMemberType" editable="false" prefWidth="268.0" text="Membership" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <TextArea fx:id="textArea" prefHeight="401.0" prefWidth="668.0" />
+   </children>
+</VBox>
